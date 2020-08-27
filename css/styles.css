@@ -46,9 +46,9 @@ ul:nth-child(1){
     display: flex;
     margin-top: calc(3rem + 4px);
     width: inherit;
-    height: calc(100vh - calc(3rem + 4px)) ;
-    /* background-color: #f1f1f1; */
+    height: calc(100vh - calc(3rem + 4px) - 50px) ;
     flex-grow: 1;
+    justify-content: center;
 }
 .margin-left{
     margin-left: 2rem;
@@ -72,5 +72,27 @@ ul:nth-child(1){
     align-items: flex-end;
 }
 .sort{
+    color: white;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
+    font-size: 1.2rem;
+}
+.generate{
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+#speed{
+    direction: rtl
+}
+footer{
+    display: flex;
+    position: fixed;
+    background-color: var(--primary-color);
+    bottom: 0;
+    height: 50px;
+    width: 100vw;
 }

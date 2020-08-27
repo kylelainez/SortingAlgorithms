@@ -22,23 +22,26 @@
         <div class="border-nav margin-left"></div>
         <div class="margin-left flex-col">
             Array Size
-            <input type="range">
+            <input type="range" min="10" max="100" step="5" id="array_size">
         </div>
         <div class="border-nav margin-left"></div>
         <div class="margin-left flex-col">
             Sorting Speed
-            <input type="range">
+            <input type="range" min="10" max="1000" step="any" id="speed">
         </div>
         <div class="border-nav margin-left"></div>
-        <div class="sort margin-left">
-            Sort!
-        </div>
+        <button class="sort margin-left">Sort!</button>
+        <div class="border-nav margin-left"></div>
+        <button class="generate margin-left">Generate New Array</button>
     </header>
 
     <div class="main">
-        
     </div>
+    <footer>
+
+    </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/bubble_sort.js"></script>
 </body>
 </html>
