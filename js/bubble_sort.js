@@ -1,28 +1,40 @@
-let bubble = () =>{
+const bubble = () =>{
     for(let x=0; x<arraySize; x++){
+        let finished_element = arraySize - x - 1;
         for(let y=0; y<arraySize - x - 1; y++){
-            div_update(array[y], arrayHeight[y],time,'#ff5976'); 
-            div_update(array[y+1],  arrayHeight[y+1],time,'#ff5976');
+            let current_element = y;
+            let next_element = y+1;
+
+            update_element(array[current_element], arrayHeight[current_element],time,'#ff5976');        //Color Update for checking
+            update_element(array[next_element],  arrayHeight[next_element],time,'#ff5976');
             time++;
-            if(arrayHeight[y] > arrayHeight[y+1]){
-                div_update(array[y], arrayHeight[y],time,'red');
-                div_update(array[y+1],  arrayHeight[y+1],time,'red');
+
+            if(arrayHeight[current_element] > arrayHeight[next_element]){                               //Check Elements to change
+                update_element(array[y], arrayHeight[y],time,'red');
+                update_element(array[next_element],  arrayHeight[next_element],time,'red');             //Color Update for change
                 time++;
-                let temp = arrayHeight[y+1];
-                arrayHeight[y+1] = arrayHeight[y];
+
+                let temp = arrayHeight[next_element];                                                   //Swap Elements
+                arrayHeight[next_element] = arrayHeight[y];
                 arrayHeight[y]= temp;
-                div_update(array[y], arrayHeight[y],time,'red');
-                div_update(array[y+1],  arrayHeight[y+1],time,'red');
+
+                update_element(array[y], arrayHeight[y],time,'red');                                    //Color Update
+                update_element(array[next_element],  arrayHeight[next_element],time,'red');
                 time++; 
             }
-            div_update(array[y], arrayHeight[y],time,'#ff5976'); 
-            div_update(array[y+1],  arrayHeight[y+1],time,'#ff5976');
+
+            update_element(array[y], arrayHeight[y],time,'#ff5976');                                    //Color Update
+            update_element(array[next_element],  arrayHeight[next_element],time,'#ff5976');
             time++;
-            div_update(array[y], arrayHeight[y],time,'var(--primary-color)');
-            div_update(array[y+1],  arrayHeight[y+1],time,'var(--primary-color)');
+
+            update_element(array[y], arrayHeight[y],time,'var(--primary-color)');
         }
-        div_update(array[array.length-x-1], arrayHeight[array.length-x-1],time,'green');
+        update_element(array[finished_element], arrayHeight[finished_element],time,'green');            //Color Update for finished element
     }
+    setTimeout(()=>{
+        sort.removeAttribute('disabled');    
+        sort.classList.remove('disabled');                                                           //Remove disabled state on Sort Button
+    },time * 1000)
     time = 1;
-    sort.removeAttribute('disabled');
+    isSwaped = true;
 }

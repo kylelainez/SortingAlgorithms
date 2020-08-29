@@ -19,7 +19,7 @@ header{
     align-items: center;
     border-bottom: 4px solid var(--primary-color);
     position: fixed;
-    background-color: #7536ff;
+    background-color: var(--primary-color);
     justify-content: flex-start;
     color: white;
 }
@@ -38,6 +38,7 @@ ul{
 li{
     text-decoration: none;
     margin-left: 1.5rem;
+    cursor: pointer;
 }
 ul:nth-child(1){
     margin-left: 0;
@@ -77,6 +78,10 @@ ul:nth-child(1){
     border: none;
     cursor: pointer;
     font-size: 1.2rem;
+}
+.disabled{
+    color: gray;
+    cursor: wait;
 }
 .generate{
     color: white;
