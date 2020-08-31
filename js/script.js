@@ -15,7 +15,7 @@ let isSwaped = false;
 speedRange.addEventListener('change',()=>{
     speed = speedRange.value;
 });
-size.addEventListener('change',()=>{
+size.addEventListener('input',()=>{
     arraySize = size.value;
     array.length = arraySize;
     generateArray();
@@ -27,6 +27,8 @@ let update_element = (elem,height,time,color)=>{
     },speed*time);
 }
 let generateArray = ()=>{
+    array = [];
+    arrayHeight = [];
     isSwaped = false;
     sort.classList.remove('disabled');
     arrayHolder.innerHTML = '';
@@ -36,7 +38,7 @@ let generateArray = ()=>{
         arrayHolder.appendChild(array[x]);
         array[x].style=`height: ${(2* arrayHeight[x]) / arraySize}%; width: ${50/arraySize}%; margin-left: ${500/arraySize}px; background-color: var(--primary-color); bottom:0;`;
     }
-    sort.removeAttribute('disabled');
+    sort.removeAttribute('disabled');   
 }
 window.onload = generateArray();
 
