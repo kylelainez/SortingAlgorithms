@@ -22,6 +22,11 @@ const sort_elements = (start,midpoint, end, isFinal) =>{
             //New Location of moved element
             update_element(array[current_element],  arrayHeight[current_element],time,'red');                   
             update_element(array[current_element+1],  arrayHeight[current_element+1],time,'red'); 
+            time++;
+
+            update_element(array[current_element],  arrayHeight[current_element],time,'#ff5976');                   
+            update_element(array[current_element+1],  arrayHeight[current_element+1],time,'#ff5976'); 
+            time++;
 
             if(next_element!== end){
                 next_element++;
@@ -46,7 +51,7 @@ const sort_elements = (start,midpoint, end, isFinal) =>{
 
     //Finished Color Update
     if(isFinal){
-        for(let i=0; i<array.length;i++){                                                                        
+        for(let i=0; i<arraySize ;i++){                                                                        
             update_element(array[i],arrayHeight[i],time,'green')
         }
         time=1;
@@ -61,7 +66,7 @@ const merge_sort = (start, end) =>{
         const midpoint = Math.floor((start+end)/2);
         merge_sort(start, midpoint);
         merge_sort(midpoint+1, end);
-        if(start===0 && end === arrayHeight.length-1) isFinal =true;
+        if(start===0 && end === arraySize-1) isFinal =true;
         sort_elements(start,midpoint+1,end, isFinal);
     }
 }

@@ -1,5 +1,5 @@
 const bubble = () =>{
-    for(let x=0; x<arraySize; x++){
+    for(let x=0; x < arraySize; x++){
         let finished_element = arraySize - x - 1;
         for(let current_element=0; current_element<arraySize - x - 1; current_element++){
             let next_element = current_element+1;
@@ -13,9 +13,7 @@ const bubble = () =>{
                 update_element(array[next_element],  arrayHeight[next_element],time,'red');             //Color Update for change
                 time++;
 
-                let temp = arrayHeight[next_element];                                                   //Swap Elements
-                arrayHeight[next_element] = arrayHeight[current_element];
-                arrayHeight[current_element]= temp;
+                swap_elements(current_element, next_element);
 
                 update_element(array[current_element], arrayHeight[current_element],time,'red');        //Color Update
                 update_element(array[next_element],  arrayHeight[next_element],time,'red');
