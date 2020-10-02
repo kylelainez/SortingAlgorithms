@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting Algorithms</title>
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&amp;display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="header-text margin-left">
-            Sorting Algorithms Visulaization
-        </div>
-        <div class="border-nav margin-left"></div>
-        <ul>
-            <li>Bubble Sort</li>
-            <li>Merge Sort</li>
-            <li>Quick Sort</li>
-            <li>Heap Sort</li>
-        </ul>
-        <div class="border-nav margin-left"></div>
-        <div class="margin-left flex-col">
-            Array Size
-            <input type="range" min="10" max="100" step="5" id="array_size">
-        </div>
-        <div class="border-nav margin-left"></div>
-        <div class="margin-left flex-col">
-            Sorting Speed
-            <input type="range" min="10" max="500" step="any" id="speed">
-        </div>
-        <div class="border-nav margin-left"></div>
-        <button class="sort margin-left">Sort!</button>
-        <div class="border-nav margin-left"></div>
-        <button class="generate margin-left">Generate New Array</button>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sorting Algorithms</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito&amp;display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <div class="header-text margin-left">
+                Sorting Algorithms Visulaization
+            </div>
+            <div class="border-nav margin-left"></div>
+            <input type="radio" name="sort" value="bubble" />Bubble Sort
+            <input type="radio" name="sort" value="merge" />Merge Sort
+            <input type="radio" name="sort" value="quick" />Quick Sort
+            <input type="radio" name="sort" value="heap" />Heap Sort
+            <div class="border-nav margin-left"></div>
+            <div class="margin-left flex-col">
+                Array Size
+                <input
+                    type="range"
+                    min="10"
+                    max="100"
+                    step="5"
+                    id="array_size"
+                />
+            </div>
+            <div class="border-nav margin-left"></div>
+            <div class="margin-left flex-col">
+                Sorting Speed
+                <input type="range" min="10" max="500" step="any" id="speed" />
+            </div>
+            <div class="border-nav margin-left"></div>
+            <button class="sort margin-left">Sort!</button>
+            <div class="border-nav margin-left"></div>
+            <button class="generate margin-left">Generate New Array</button>
+        </header>
 
-    <div class="main">
-    </div>
-    <footer>
+        <div class="main"></div>
+        <footer></footer>
 
-    </footer>
-
-    <script src="js/script.js"></script>
-    <script src="js/bubble_sort.js"></script>
-    <script src="js/merge_sort.js"></script>
-    <script src="js/quick_sort.js"></script>
-    <script src="js/heap_sort.js"></script>
-    <script src="js/swap_elements.js"></script>
-</body>
+        <script src="js/script.js"></script>
+        <script src="js/bubble_sort.js"></script>
+        <script src="js/merge_sort.js"></script>
+        <script src="js/quick_sort.js"></script>
+        <script src="js/heap_sort.js"></script>
+        <script src="js/swap_elements.js"></script>
+    </body>
 </html>

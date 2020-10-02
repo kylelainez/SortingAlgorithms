@@ -1,6 +1,7 @@
-const bubble = () =>{
-    for(let x=0; x < arraySize; x++){
+const bubble = () => {
+    for (let x = 0; x < arraySize; x++) {
         let finished_element = arraySize - x - 1;
+        // prettier-ignore
         for(let current_element=0; current_element<arraySize - x - 1; current_element++){
             let next_element = current_element+1;
 
@@ -26,12 +27,13 @@ const bubble = () =>{
 
             update_element(array[current_element], arrayHeight[current_element],time,'var(--primary-color)');
         }
-        update_element(array[finished_element], arrayHeight[finished_element],time,'green');            //Color Update for finished element
+        // prettier-ignore
+        update_element(array[finished_element], arrayHeight[finished_element], time, "green"); //Color Update for finished element
     }
-    setTimeout(()=>{
-        sort.removeAttribute('disabled');    
-        sort.classList.remove('disabled');                                                              //Remove disabled state on Sort Button
-    },time * 1000)
-    time = 1;
-    isSwaped = true;
-}
+    setTimeout(() => {
+        sort.removeAttribute("disabled");
+        sort.classList.remove("disabled"); //Remove disabled state on Sort Button
+        time = 1;
+        isSwaped = true;
+    }, time * speed);
+};
