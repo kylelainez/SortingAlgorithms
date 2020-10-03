@@ -13,7 +13,7 @@ let time = 1;
 let speed = speedRange.value;
 let isSwaped = false;
 
-let update_element = (elem, height, time, color) => {
+const update_element = (elem, height, time, color) => {
     setTimeout(() => {
         elem.style = `height: ${(2 * height) / arraySize}%; width: ${
             50 / arraySize
@@ -22,7 +22,7 @@ let update_element = (elem, height, time, color) => {
         }px; background-color: ${color}; bottom:0;`;
     }, speed * time);
 };
-let generateArray = () => {
+const generateArray = () => {
     array = [];
     arrayHeight = [];
     isSwaped = false;
@@ -43,6 +43,11 @@ let generateArray = () => {
     }
     sort.removeAttribute("disabled");
 };
+const swap_elements = (i1, i2) => {
+    let temp = arrayHeight[i1];
+    arrayHeight[i1] = arrayHeight[i2];
+    arrayHeight[i2] = temp;
+};
 
 speedRange.addEventListener("change", () => {
     speed = speedRange.value;
@@ -54,7 +59,7 @@ size.addEventListener("input", () => {
 });
 generate.addEventListener("click", generateArray);
 sort.addEventListener("click", () => {
-    if (isSwaped) alert("already swaped!");
+    if (isSwaped) alert("Already Sorted!");
     else {
         let checked;
         sort.disabled = true;

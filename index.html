@@ -16,10 +16,24 @@
                 Sorting Algorithms Visulaization
             </div>
             <div class="border-nav margin-left"></div>
-            <input type="radio" name="sort" value="bubble" />Bubble Sort
-            <input type="radio" name="sort" value="merge" />Merge Sort
-            <input type="radio" name="sort" value="quick" />Quick Sort
-            <input type="radio" name="sort" value="heap" />Heap Sort
+            <input
+                type="radio"
+                name="sort"
+                value="bubble"
+                id="bubble"
+                checked
+            />
+            <label for="bubble">Bubble Sort</label>
+
+            <input type="radio" name="sort" value="merge" id="merge" />
+            <label for="merge">Merge Sort</label>
+
+            <input type="radio" name="sort" value="quick" id="quick" />
+            <label for="quick">Quick Sort</label>
+
+            <input type="radio" name="sort" value="heap" id="heap" />
+            <label for="heap">Heap Sort</label>
+
             <div class="border-nav margin-left"></div>
             <div class="margin-left flex-col">
                 Array Size
@@ -50,6 +64,5 @@
         <script src="js/merge_sort.js"></script>
         <script src="js/quick_sort.js"></script>
         <script src="js/heap_sort.js"></script>
-        <script src="js/swap_elements.js"></script>
     </body>
 </html>
