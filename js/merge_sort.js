@@ -52,7 +52,6 @@ const sort_elements = (start, midpoint, end, isFinal) => {
                 time,
                 "red"
             );
-            time++;
 
             update_element(
                 array[current_element],
@@ -66,7 +65,6 @@ const sort_elements = (start, midpoint, end, isFinal) => {
                 time,
                 "#ff5976"
             );
-            time++;
 
             if (next_element !== end) {
                 next_element++;
